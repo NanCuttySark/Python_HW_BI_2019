@@ -85,10 +85,8 @@ k = 8
 number = int(input("Give me the number, please :)"))
 if number % 15 == 0:
     print("fizzbuzz")
-else:
-    if number % 3 == 0:
-        print("fizz")
-    else:
-        if number % 5 == 0:
-            print("buzz")
+elif number % 3 == 0:
+    print("fizz")
+elif number % 5 == 0:
+    print("buzz")
 
