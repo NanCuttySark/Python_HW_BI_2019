@@ -79,7 +79,138 @@ n = 100
 k = 8
 # The number of combinations is 186087894300
 
-# TO DO: truth tables
+# truth table for NOT
+def f(i):
+    return not i
+
+
+def main():
+    print("not  x   | result ")
+    print("---------+--------")
+    for i in [True, False]:
+        print("not", i, "|", f(i))
+
+
+main()
+"""
+ красиво не получилось, не знаю, как внести поправку на разную длину слов True и False
+ output: 
+not  x   | result 
+---------+--------
+not True | False
+not False | True
+"""
+# truth table for OR
+def g(x, y):
+    return x or y
+
+
+def main():
+    print("  x  or   y   | result ")
+    print("--------------+--------")
+    for x in [True, False]:
+        for y in [True, False]:
+            print(x, "or", y, "|", g(x, y))
+
+
+main()
+"""
+output:
+  x  or   y   | result 
+--------------+--------
+True or True | True
+True or False | True
+False or True | True
+False or False | False
+"""
+# truth table for XOR
+def t(q, w):
+    return q ^ w
+
+
+def main():
+    print("  x   ^   y   | result ")
+    print("--------------+--------")
+    for q in [True, False]:
+        for w in [True, False]:
+            print(q, " ^ ", w, "|", t(q, w))
+
+
+main()
+"""
+  x   ^   y   | result 
+--------------+--------
+True  ^  True | False
+True  ^  False | True
+False  ^  True | True
+False  ^  False | False
+"""
+# truth table for XOR
+def p(aa, bb):
+    return not (aa or bb)
+
+
+def main():
+    print("  x  xor   y   | result ")
+    print("---------------+--------")
+    for aa in [True, False]:
+        for bb in [True, False]:
+            print(aa, "xor", bb, "|", p(aa, bb))
+
+
+main()
+"""
+  x  xor   y   | result 
+---------------+--------
+True xor True | False
+True xor False | False
+False xor True | False
+False xor False | True
+"""
+# truth table for AND
+def u(qq, tt):
+    return qq and tt
+
+
+def main():
+    print("  x  and   y   | result ")
+    print("---------------+--------")
+    for qq in [True, False]:
+        for tt in [True, False]:
+            print(qq, "and", tt, "|", u(qq, tt))
+
+
+main()
+"""
+  x  and   y   | result 
+---------------+--------
+True and True | True
+True and False | False
+False and True | False
+False and False | False
+"""
+# truth table for NAND
+def p(xx, yy):
+    return not (xx and yy)
+
+
+def main():
+    print("  x  nand   y  | result ")
+    print("---------------+--------")
+    for xx in [True, False]:
+        for yy in [True, False]:
+            print(xx, "nand", yy, "|", p(xx, yy))
+
+
+main()
+"""
+  x  nand   y  | result 
+---------------+--------
+True nand True | False
+True nand False | True
+False nand True | True
+False nand False | True
+"""
 
 # fizzbuzz
 number = int(input("Give me the number, please :)"))
