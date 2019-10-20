@@ -51,11 +51,13 @@ half_perimeter = 0.5 * (a + b + c)
 triangle_area = (half_perimeter * (half_perimeter - a) * (half_perimeter - b) * (half_perimeter - c)) ** 0.5
 print(round(triangle_area, 3))
 
-# example:
+"""
+example:
 a = 1
 b = 2
 c = 3
-# 2.905
+2.905
+"""
 
 # 2) body mass index calculation
 mass = int(input("What is your body mass in kg?\n"))
@@ -63,10 +65,12 @@ height = float(input("What is your height in meters>\n"))
 BMI = mass / height ** 2
 print('Your body mass index is', round(BMI, 1))
 
-# example:
+"""
+example:
 mass = 79
 height = 1.81
-# Your body mass index is 24.1
+Your body mass index is 24.1
+"""
 
 # 3) The number of combinations from n by k
 n = int(input("How many elements are in the set?\n"))
@@ -74,10 +78,12 @@ k = int(input("How many elements are taken from the set?\n "))
 C_n_k = math.factorial(n) / (math.factorial(k) * math.factorial(n - k))
 print("The number of combinations is", int(C_n_k))
 
-# example
+"""
+example
 n = 100
 k = 8
-# The number of combinations is 186087894300
+The number of combinations is 186087894300
+"""
 
 # truth table for NOT
 def f(i):
@@ -145,27 +151,27 @@ True  ^  False | True
 False  ^  True | True
 False  ^  False | False
 """
-# truth table for XOR
+# truth table for NOR
 def p(aa, bb):
     return not (aa or bb)
 
 
 def main():
-    print("  x  xor   y   | result ")
+    print("  x  nor   y   | result ")
     print("---------------+--------")
     for aa in [True, False]:
         for bb in [True, False]:
-            print(aa, "xor", bb, "|", p(aa, bb))
+            print(aa, "nor", bb, "|", p(aa, bb))
 
 
 main()
 """
-  x  xor   y   | result 
+  x  nor   y   | result 
 ---------------+--------
-True xor True | False
-True xor False | False
-False xor True | False
-False xor False | True
+True nor True | False
+True nor False | False
+False nor True | False
+False nor False | True
 """
 # truth table for AND
 def u(qq, tt):
